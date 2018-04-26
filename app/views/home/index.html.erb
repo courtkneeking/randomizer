@@ -1,0 +1,20 @@
+
+<div style = "background-color: <%=@color_two%>; border: 1vh solid <%= @color%>" id = "page">
+<h1 style = "color: <%=@color%>";>The Randomizer</h1>  
+<h3 style = "color: white;">What type of random do you want?</h3>   
+<form class="form-inline" method = "post" action = "/place" >
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <div class="form-group">
+        <label for "type" class = "col-sm-2 control-label">Type</label>
+        <div class = "col-sm-10">
+            <input style = "background-color: white; position: relative;" type = "text" class = "form-control" id = "type" name = "type">
+        </div>
+    </div>
+    <button type="submit" style = "background-color: <%=@color%>;" class= "btn btn-default">Random!</button>
+</form>
+</div>
+
+
+
+
+

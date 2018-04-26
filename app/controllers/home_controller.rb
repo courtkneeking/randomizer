@@ -6,8 +6,8 @@ class HomeController < ApplicationController
     @color_two = "#"+color_two
   end
   def place
-    lat = request.location.latitude
-    lng = request.location.longitude
+    lat = 34.180976034
+    lng = -118.3071530
     radius = 500
     type = params[:type] 
     base = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
@@ -20,13 +20,16 @@ class HomeController < ApplicationController
     response = HTTP.get(url)
     parsed_response = JSON.parse(response.body)
     length = parsed_response['results'].length
+
     number = rand(0..length)
     random = number
     session[:place] = parsed_response['results'][random]['name']
     session[:address] = parsed_response['results'][random]['vicinity']
+
     redirect_to "/random"
   end
   def random
+    @lat = session[:lat]
     color = "%06x" % (rand * 0xffffff)
     color_two = "%06x" % (rand * 0xffffff)
     @color = "#"+color
@@ -35,4 +38,5 @@ class HomeController < ApplicationController
     @place = session[:place]
     @address = session[:address]
   end 
+
 end

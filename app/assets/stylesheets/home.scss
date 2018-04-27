@@ -2,7 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 #page {
     padding: 5vw;
     height: 100vh;
+}
+
+h1 {
+    font-size: 6vh;
+}
+h2 {
+    font-size: 5vh;
+}
+label {
+    font-weight: normal;
+}
+form {
+    font-size: 4vh;
+}
+h3 {
+    font-size: 4vh;
+    
+}
+h4 {
+    font-size: 3vh;
+}
+h5 {
+font-size: 3vh !important;
+   
+}
+img {
+    float: left;
+    margin-top: 1vh;
+}
+.container {
+    min-height:20vh;
+    color: white;
+    min-width: 70vw; 
+    border-radius: 5px;
+    margin: 5vh 0 5vh 0;
+    padding: 1vh;
+    text-justify: auto;
+}
+.top {
+    height: 30%;
+    margin: 15% 0 10% 0;
+    word-wrap: break-word;
+}
+.bottom {
+    height: 70%;
 }

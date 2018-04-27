@@ -1,13 +1,20 @@
 
-<div id = "page" style = "background-color: <%= @color%>; border: 1vh solid <%= @color_two%>">
+<div id = "page" style = "<%= @font %>;background-color: <%= @color%>; border: 1vh solid <%= @color_two%>">
+<div class = "rotate-center">
+<h1 style = "color: white;">Getting random...</h1>
 
-<h1 style = "color: <%=@color_two%>;">Getting random ... </h1>
-
-<div class = "container" style = "background-color: <%= @color_two%>; width: 50vw; border-radius: 5px;">
-    <h2><%= @place %></h2>
-    <h2><%= @address %></h2>
+<div class = "container" style = "background-color: <%= @color_two%>; border: 1px solid white">
+    <span class = "top">
+        <img src = "<%= @icon %>">
+        <h3 style = "margin-left: 5vw !important;"><%= @place %></h3>
+        
+    </span>
+    <span class = "right">
+        <h5 style = "margin-left: 1vw;"><%= @address %></h5>
+    </span>
 </div>
 <br>
-
-<a href="/" class="btn btn-default" style = "background-color: <%=@color_two%>;">Try again</a>
+<a href="/" class="btn btn-default" style = "color:white;background-color:<%=@color_two%>;margin-right:2vw;"><h4>Try again</h4></a>
+<a href="/clear" class="btn btn-default" style = "color:white;background-color: <%=@color_two%>;"><h4>New zipcode</h4></a>
+</div>
 </div>

@@ -2,5 +2,80 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-
+  def places_list
+    @places_list = [
+      "bar",
+      "cafe",
+      "library",
+      "liquor_store",
+      "lodging",
+      "museum",
+      "night_club",
+      "movie_theater",
+      "store",
+      "subway_station",
+      "art_gallery",
+      "atm",
+      "bakery",
+      "accounting",
+      "amusement_park",
+      "aquarium",
+      "clothing_store",
+      "bank",
+      "beauty_salon",
+      "bicycle_store",
+      "book_store",
+      "bowling_alley",
+      "bus_station",
+      "campground",
+      "casino",
+      "cemetery",
+      "church",
+      "convenience_store",
+      "courthouse",
+      "dentist",
+      "doctor",
+      "electrician",
+      "electronics_store",
+      "embassy",
+      "fire_station",
+      "florist",
+      "funeral_home",
+      "furniture_store",
+      "gas_station",
+      "gym",
+      "hair_care",
+      "jewelry_store",
+      "laundry",
+      "lawyer",
+      "meal_delivery",
+      "meal_takeaway",
+      "movie_rental",
+      "painter",
+      "park",
+      "parking",
+      "pet_store",
+      "pharmacy",
+      "physiotherapist",
+      "restaurant",
+      "rv_park",
+      "school",
+      "shoe_store",
+      "spa",
+      "stadium",
+      "supermarket",
+      "zoo"
+      ]
+  end
+  def fonts
+    @fonts = [
+      "font-family: 'Pacifico'", 
+      "font-family: 'Oswald', sans-serif", 
+      "font-family: 'Titan One'", 
+      "font-family: 'Lobster', cursive", 
+      "font-family: 'Roboto'", 
+      "font-family: 'Black Han Sans'", 
+      "font-family: 'Abril Fatface'"
+      ]
+  end
 end

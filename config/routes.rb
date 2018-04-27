@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   root 'home#index'
   post 'place' => 'home#place'
+  post 'zipcode' => 'home#zipcode'
   get 'random' => 'home#random'
   get 'color' => 'home#color'
   get 'location' => 'home#location'
-  post 'here' => "home#here"
+  get 'clear' => 'home#clear_session'
 
 
   
